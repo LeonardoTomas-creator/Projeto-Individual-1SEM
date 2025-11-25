@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Views de "Firework" - Katy Perry</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #e74c3c;
+    }
+    canvas {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>📈 Views de “Firework” (Katy Perry)</h1>
+  <p>Atualização diária</p>
+  <canvas id="viewsChart"></canvas>
+
+  <script>
+    fetch("./data/views_firework.json")
+      .then(response => response.json())
+      .then(data => {
+        // Ordena os registros pela data
+        data.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
+        const labels = data.map(d => new Date(d.timestamp).toLocaleDateString("pt-BR"));
+        const views = data.map(d => d.viewCount);
+
+        const ctx = document.getElementById("viewsChart").getContext("2d");
+
+        new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: [{
+              label: "Visualizações acumuladas",
+              data: views,
+              borderColor: "#ff6384",
+              backgroundColor: "rgba(255,99,132,0.2)",
+              fill: true,
+              tension: 0.3,
+              pointRadius: 4,
+              pointBackgroundColor: "#ff6384"
+            }]
+          },
+          options: {
+            responsive: true,
+            scales: {
+              y: {
+                ticks: {
+                  callback: value => value.toLocaleString("pt-BR")
+                }
+              }
+            }
+          }
+        });
+      })
+      .catch(err => console.error("Erro ao carregar JSON:", err));
+  </script>
+</body>
+</html>
