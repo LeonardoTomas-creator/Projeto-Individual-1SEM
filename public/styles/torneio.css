@@ -66,7 +66,7 @@ p {
   margin-bottom: 25px;
 }
 
-/* -------- BRACKET (tabelas do torneio) -------- */
+/* -------- BRACKET -------- */
 .bracket {
   display: flex;
   justify-content: center;
@@ -75,7 +75,7 @@ p {
   margin-bottom: 30px;
 }
 
-.round {
+.rodada {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(6px);
   padding: 20px;
@@ -88,7 +88,7 @@ p {
   border: 2px solid #f6bdda;
 }
 
-.champion {
+.campea {
   border: 2px solid gold;
 }
 

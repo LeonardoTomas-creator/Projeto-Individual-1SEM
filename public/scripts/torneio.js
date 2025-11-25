@@ -1,4 +1,3 @@
-// Lista de músicas
 const musicas = [
   "California Gurls",
   "Teenage Dream",
@@ -21,13 +20,12 @@ let semis = [];
 let finalistas = [];
 let campea = null;
 
-// Isso embaralha a lista para que as partidas fiquem aleatórias a cada torneio.
 function embaralhar(arr) {
   return arr.sort(() => Math.random() - 0.5);
 }
 
 function criarPartidas(elemento, lista, proximaFaseCallback) {
-  elemento.innerHTML = ""; // Limpa a área onde as partidas vão aparecer, se já tinha partidas antigas ali, apaga tudo.
+  elemento.innerHTML = "";
 
   for (let i = 0; i < lista.length; i += 2) {
     // Se a lista tiver 8 músicas, ela vai montar as duplas assim:
@@ -100,7 +98,6 @@ function vencedorQuartas(vencedor) {
   }
 }
 
-// Assim que tiver 2 cria a final.
 function vencedorSemi(vencedor) {
   finalistas.push(vencedor);
   if (finalistas.length == 2) {
@@ -120,7 +117,6 @@ function mostrarCampea() {
   campeaDiv.innerHTML = `<div class="team winner"> ${campea}</div>`;
 }
 
-// Quando clicar reinicia o torneio.
 reiniciar.onclick = iniciarTorneio;
 
 iniciarTorneio();
@@ -130,7 +126,6 @@ function salvarNoStorage() {
     semifinalistas: semis,
     finalistas: finalistas,
     campea: campea,
-    data: new Date().toLocaleString(), // opcional
   };
 
   localStorage.setItem("torneioTeenageDream", JSON.stringify(dados));
