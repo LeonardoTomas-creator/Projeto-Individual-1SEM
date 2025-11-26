@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="icon" href="assets/icon/favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/images/tatto.png" alt="Logo">
+        <nav>
+            <a href="index.html">Sair</a>
+        </nav>
+    </header>
+
+    <aside class="sidebar">
+        <h2>Menu</h2>
+        <a href="dashboard.html">Visão Geral</a>
+        <a href="torneio.html">Torneio de singles</a>
+        <a href="jogo-grammy/grammy.html">Jogo do Grammy</a>
+        <a href="calculadora.html">Calculadora de receitas</a>
+        <a href="#">Configurações</a>
+    </aside>
+
+    <main class="conteudo">
+        <h1>Resultados do último torneio:</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Semifinalistas</h3>
+                <p id="card-semis">Carregando...</p>
+            </div>
+
+            <div class="card">
+                <h3>Finalistas</h3>
+                <p id="card-final">Carregando...</p>
+            </div>
+
+            <div class="card">
+                <h3>Campeã</h3>
+                <p id="card-campea">Carregando...</p>
+            </div>
+        </div>
+
+        <section class="box">
+            <h2>Não sei</h2>
+            <p>gráfico, tabelas</p>
+        </section>
+
+    </main>
+    <script src="scripts/dashboard.js"></script>
+</body>
+
+</html>

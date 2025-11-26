@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teenage Dream | Simulador de Receita</title>
+    <link rel="stylesheet" href="styles/calculadora.css">
+    <link rel="icon" href="assets/icon/favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/images/tatto.png" alt="Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <section class="simulador">
+        <h2>Simulador de Receita de Vídeo</h2>
+
+        <div class="inputs">
+            <label>
+                Visualizações do vídeo:
+                <input type="number" id="input_views" placeholder="Ex: 100000">
+            </label>
+
+            <label>
+                Ganho por 1000 views (CPM):
+                <input type="number" id="input_cpm" placeholder="Ex: 4.50">
+            </label>
+
+            <button onclick="calcularReceita()">Calcular Receita</button>
+        </div>
+
+        <div class="resultado" id="div_mensagem">
+            Digite os dados acima e clique em Calcular.
+        </div>
+    </section>
+
+    <script>
+        function calcularReceita() {
+            var views = Number(input_views.value);
+            var cpm = Number(input_cpm.value);
+            var receita = (views / 1000) * cpm;
+
+            if (views <= 0 || cpm <= 0) {
+                resultado.innerHTML = "<span style='color:#ff4a70'>Preencha todos os campos corretamente.</span>";
+            }
+            else {
+
+                div_mensagem.innerHTML = `
+      <h3>Resultado</h3>
+      <p>Visualizações: ${views}</p>
+      <p>CPM: US ${cpm.toFixed(2)}</p>
+      <p>Receita estimada: <span class="receita">US ${receita.toFixed(2)}</span></p>
+    `;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
