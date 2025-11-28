@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teenage Dream | Login</title>
+
+  <link rel="stylesheet" href="styles/login.css">
+  <link rel="icon" href="assets/icon/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cadastro.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <h2>Bem-vindo(a) de volta</h2>
+      <p>Entre para acessar o dashboard e os jogos!</p>
+
+
+
+
+      <form class="login-form">
+        <label for="email">E-mail</label>
+        <input type="email" id="input_email" placeholder="exemplo@email.com" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="input_senha" placeholder="Digite sua senha" required>
+
+        <button type="button" onclick="entrar()">Entrar</button>
+
+        <a href="#" class="esqueceu">Esqueceu a senha?</a>
+        <div id="div_mensagem" style="margin-top: 10px;"></div>
+        <div id="mensagem_erro" style="margin-top: 10px;"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    "Cause baby, you're a firework" - Katy Perry
+    <br>Feito por Leonardo Tomas | SPTech © 2025
+  </footer>
+</body>
+
+</html>
+<script>
+  function entrar() {
+    var email = input_email.value;
+    var senha = input_senha.value;
+
+    if (email == "" || senha == "") {
+      div_erro_login.style.opacity = '1';
+      return false;
+    } else {
+      console.log("FORM LOGIN: ", email);
+      console.log("FORM SENHA: ", senha);
+
+      fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          emailServer: email,
+          senhaServer: senha
+        })
+      }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+            sessionStorage.EMAIL_USUARIO = json[0].email;
+            sessionStorage.NOME_USUARIO = json[0].nome;
+            sessionStorage.ID_USUARIO = json[0].idUsuario;
+          });
+
+          window.location = "./dashboard.html";
+
+        } else {
+
+          console.log("Houve um erro ao tentar realizar o login!");
+        }
+
+      }).catch(function (erro) {
+        console.log(erro);
+      })
+
+      return false;
+
+    }
+
+
+  }
+</script>
