@@ -6,9 +6,9 @@
 
 ## Objetivo do Projeto 📌
 
-Criar um website interativo que possibilite:
-▪ Cadastro de usuários com validações no JavaScript;
-▪ Comunicação com API [Web-Data-Viz](https://github.com/BandTec/web-data-viz) em Node.js;
+Criar um website interativo que possibilite: <br>
+▪ Cadastro de usuários com validações no JavaScript; <br>
+▪ Comunicação com API [Web-Data-Viz](https://github.com/BandTec/web-data-viz) em Node.js; <br>
 ▪ Registro e consulta de dados no banco de dados.
 
 ## Aplicar conteúdo aprendido de todas as disciplinas 🧩
@@ -16,7 +16,7 @@ Criar um website interativo que possibilite:
 ▪ Tecnologia da Informação: Documento do Projeto, Planejamento no Trello, uso do Git (governança) ; <br>
 ▪ Banco de Dados: Modelo Lógico, relacionamentos, comandos SQL ; <br>
 ▪ Algoritmos: Variáveis, Funções, Operações Matemáticas, Condicionais, Repetições, Vetores ; <br>
-▪ Arq. Computadores e Matemática : Aplicação de cálculos matemáticos ;
-▪ Introdução aos Sistemas Operacionais : Utilização de uma VM Linux contendo somente seu BD ;
-▪ Pesquisa e Inovação: Contexto, Planejamento, Dashboard e Indicadores ;
+▪ Arq. Computadores e Matemática : Aplicação de cálculos matemáticos ; <br>
+▪ Introdução aos Sistemas Operacionais : Utilização de uma VM Linux contendo somente seu BD ; <br>
+▪ Pesquisa e Inovação: Contexto, Planejamento, Dashboard e Indicadores ; <br>
 ▪ Socioemocional: aplicar os conceitos trabalhados em aula.
