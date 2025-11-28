@@ -1,4 +1,4 @@
-# Era Teenage Dream - Projeto Individual 🎤
+# Era Teenage Dream - Projeto Individual 🍭
 
 
 ▪ Este é um projeto desenvolvido como parte do **"Desafio - Projeto Individual"** do curso de ADS da SPTech, com o objetivo de criar um website com formulário de cadastro, utilizando tecnologias aprendidas ao longo do semestre. <br> <br>
