@@ -79,6 +79,18 @@ section img {
   box-shadow: 0 0 10px #fff;
 }
 
+p {
+  text-align: justify;
+}
+
+.section_records p {
+  text-align: center;
+}
+
+.desenvolvedor {
+ text-align: center;
+}
+
 /* -------- SINGLES -------- */
 
 .div_singles {
