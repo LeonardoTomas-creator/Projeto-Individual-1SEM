@@ -1,65 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-		<meta charset="UTF-8" />
 
-		<link rel="stylesheet" href="grammy.css" />
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Teenage Dream | Jogo</title>
 
-		<script>
-			function iniciarJogo() {
-				var nivel = document.getElementById('nivel').value
+	<link rel="stylesheet" href="grammy.css" />
+	<link rel="icon" href="../assets/icon/favicon.png">
 
-				if(nivel == '') {
-					alert('Selecione um nível para iniciar o jogo')
-					return false
-				}
+	<script>
+		function iniciarJogo() {
+			var nivel = document.getElementById('nivel').value
 
-				window.location.href = "app.html?" + nivel
-
+			if (nivel == '') {
+				alert('Selecione um nível para iniciar o jogo')
+				return false
 			}
-		</script>
-	</head>
-	<body>
-    <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="../dashboard.html">Dashboard</a>
-    </nav>
-  </header>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="d-flex justify-content-center">
-						<img src="imagens/game.png" />
-					</div>
-				</div>
-			</div>
 
-			<div class="row">
-				<div class="col">
-					<div class="d-flex justify-content-center">
-						<div class="mb-2">
-							<select class="form-control" id="nivel">
-								<option value="">-- Selecione o nível --</option>
-								<option value="normal">Normal</option>
-								<option value="dificil">Difícil</option>
-								<option value="beyonce">Beyoncé</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
+			window.location.href = "app.html?" + nivel
+		}
+	</script>
+</head>
 
+<body>
+	<header>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="../dashboard.html">Dashboard</a>
+		</nav>
+	</header>
 
-			<div class="row">
-				<div class="col">
-					<div class="d-flex justify-content-center">
-						<button type="button" onclick="iniciarJogo()" >Iniciar Jogo</button>
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="container">
+		<img src="imagens/game.png" />
+	</div>
 
-	</body>
+	<div class="row">
+		<select class="form-control" id="nivel">
+			<option value="">-- Selecione o nível --</option>
+			<option value="normal">Normal</option>
+			<option value="dificil">Difícil</option>
+			<option value="beyonce">Beyoncé</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<button type="button" onclick="iniciarJogo()">Iniciar Jogo</button>
+	</div>
+
+</body>
+
 </html>
