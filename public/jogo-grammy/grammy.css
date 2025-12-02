@@ -36,6 +36,7 @@ header nav a {
   border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(12px);
   transition: 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 
 header nav a:hover {
