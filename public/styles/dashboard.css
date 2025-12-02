@@ -87,15 +87,15 @@ header nav a:hover {
 
 /* ÁREA DE CONTEÚDO */
 .conteudo {
-  margin-left: 260px;
-  margin-top: 120px;
-  padding: 20px;
+  margin-left: 240px;
+  margin-top: 110px;
+  padding: 10px;
 }
 
 .conteudo h1 {
   font-family: "Pacifico", cursive;
   color: #f6bdda;
-  font-size: 32px;
+  font-size: 26px;
   text-shadow: 0 0 4px #ee095d;
 }
 
@@ -109,12 +109,12 @@ header nav a:hover {
 
 .card {
   background: rgba(255, 255, 255, 0.2);
-  padding: 25px;
   border-radius: 15px;
-  width: 320px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 10px #fff;
   text-align: center;
+  width: 260px;
+  padding: 15px;
 }
 
 .card h3 {
@@ -124,20 +124,20 @@ header nav a:hover {
 
 .card p {
   color: #ed1b7d;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 /* CARD CAMPEÃ */
 .card-campea {
   background: rgba(255, 255, 255, 0.2);
-  padding: 25px;
   border-radius: 15px;
-  width: 320px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 10px #fff;
   text-align: center;
   border: 2px solid gold;
+  width: 260px;
+  padding: 15px;
 }
 
 .card-campea h3 {
@@ -147,15 +147,15 @@ header nav a:hover {
 
 .card-campea p {
   color: #ed1b7d;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 /* BOX DE CONTEÚDO MAIOR */
 .box {
-  margin-top: 40px;
+  margin-top: 20px;
   background: rgba(255, 255, 255, 0.2);
-  padding: 30px;
+  padding: 20px;
   border-radius: 15px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 10px #fff;
