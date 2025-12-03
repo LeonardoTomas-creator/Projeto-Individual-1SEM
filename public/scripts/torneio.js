@@ -36,12 +36,7 @@ function criarPartidas(elemento, lista, proximaFaseCallback) {
   elemento.innerHTML = ""; // Limpa a área onde as partidas vão aparecer, se já tinha partidas antigas ali, apaga tudo.
 
   for (let i = 0; i < lista.length; i += 2) {
-    // Se a lista tiver 8 músicas, ela vai montar as duplas assim:
-    // i = 0 → lista[0] vs lista[1]
-    // i = 2 → lista[2] vs lista[3]
-    // i = 4 → lista[4] vs lista[5]
-    // i = 6 → lista[6] vs lista[7]
-    // Ou seja: 4 confrontos.
+    // Se a lista tiver 8 músicas, ela vai montar 4 confrontos.
 
     // Cria a caixa da partida
     const match = document.createElement("div");
